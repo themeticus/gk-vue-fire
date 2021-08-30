@@ -1,7 +1,7 @@
 <template>
   <div class="card card-body mt-4">
     <h3>Edit Notes</h3>
-    <form @submit.prevent="update">
+    <form @submit.prevent="update"> 
       <div class="form-group">
         <label>Title</label>
         <input 
@@ -17,6 +17,7 @@
           class="form-control"
           type="textarea"
           required
+          autofocus
         />
       </div>
 

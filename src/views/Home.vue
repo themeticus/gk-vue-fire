@@ -1,6 +1,6 @@
 <template>
-  <NoteCreate />
-  <NoteList />
+  <NoteCreate /><br/>
+  <NoteList /><br/>
 </template>
 
 <script>
