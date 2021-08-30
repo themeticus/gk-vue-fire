@@ -3,12 +3,15 @@
     <form @submit.prevent="onSubmit">
       <div class="form-group">
         <label>Title</label>
-        <input v-model="form.title" class="form-control" required />
+        <input 
+          v-model="form.title" 
+          class="form-control" 
+          required />
       </div>
 
       <div class="form-group mt-3">
         <label>Note</label>
-        <input
+        <textarea
           v-model="form.note"
           class="form-control"
           type="textarea"
@@ -16,7 +19,9 @@
         />
       </div>
 
-      <button type="submit" class="btn btn-success mt-3">
+      <button 
+        type="submit" 
+        class="btn btn-success mt-3">
         New Note
       </button>
     </form>

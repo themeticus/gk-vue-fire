@@ -1,6 +1,9 @@
 <template>
   <div class="row">
-    <div class="col-md-4" v-for="{ id, title, note } in users" :key="id">
+    <div 
+      class="col-md-4" 
+      v-for="{ id, title, note } in notes"  
+      :key="id">
       <!-- this can obviously be styled better -->
       {{ title }}
       {{ note }}
@@ -9,7 +12,9 @@
           Edit
         </button>
       </router-link>
-      <button class="btn btn-danger btn-sm" @click="deleteNote(id)">
+      <button 
+        class="btn btn-danger btn-sm" 
+        @click="deleteNote(id)">
         Delete
       </button>
     </div>
@@ -21,8 +26,8 @@ import { useLoadNotes, deleteNote } from '@/firebase'
 
 export default {
   setup() {
-    const users = useLoadNotes()
-    return { users, deleteNote }
+    const notes = useLoadNotes()
+    return { notes, deleteNote }
   }
 }
 </script>

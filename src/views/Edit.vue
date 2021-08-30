@@ -1,15 +1,18 @@
 <template>
   <div class="card card-body mt-4">
-    <h3>Edit users</h3>
+    <h3>Edit Notes</h3>
     <form @submit.prevent="update">
       <div class="form-group">
         <label>Title</label>
-        <input v-model="form.title" class="form-control" required />
+        <input 
+          v-model="form.title" 
+          class="form-control" 
+          required />
       </div>
 
       <div class="form-group mt-3">
         <label>Note</label>
-        <input
+        <textarea
           v-model="form.note"
           class="form-control"
           type="textarea"
@@ -17,7 +20,9 @@
         />
       </div>
 
-      <button type="submit" class="btn btn-primary  mt-3">
+      <button 
+          type="submit" 
+          class="btn btn-primary  mt-3">
         Update
       </button>
     </form>

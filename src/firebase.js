@@ -1,6 +1,8 @@
 import firebase from 'firebase'
 import { ref, onUnmounted } from 'vue'
 
+/* setup using lloydafrica@gmail.com */
+
 const config = {
   apiKey: 'AIzaSyA9lzwPhAt0Q0bj6xHPQccNM-uWpFTfakc',
   authDomain: 'gk-vue-fire.firebaseapp.com',
