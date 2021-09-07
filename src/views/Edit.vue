@@ -1,6 +1,6 @@
 <template>
   <div class="card card-body mt-4">
-    <h3>Edit Notes</h3>
+    <h3>Edit Note</h3>
     <form @submit.prevent="update"> 
       <div class="form-group">
         <label>Title</label>
@@ -12,6 +12,9 @@
 
       <div class="form-group mt-3">
         <label>Note</label>
+
+        <!-- // TO DO : Replace <textarea> with <check-list> component // -->
+
         <textarea
           v-model="form.note"
           class="form-control"
@@ -23,7 +26,7 @@
 
       <button 
           type="submit" 
-          class="btn btn-primary  mt-3">
+          class="btn btn-primary mt-3">
         Update
       </button>
     </form>
@@ -44,7 +47,6 @@ export default {
     const form = reactive({ title: '', note: '' })
     onMounted(async () => {
       const note = await getNote(noteId.value)
-      console.log(note, noteId.value)
       form.title = note.title
       form.note = note.note
     })

@@ -11,12 +11,14 @@
 
       <div class="form-group mt-3">
         <label>Note</label>
+
+        <!-- // TO DO : Replace <textarea> with <check-list> component // -->
+
         <textarea
           v-model="form.note"
           class="form-control"
           type="textarea"
-          required
-        />
+          required />
       </div>
 
       <button 
@@ -31,6 +33,11 @@
 <script>
 import { createNote } from '@/firebase'
 import { reactive } from 'vue'
+
+// TO DO : Randomize the background-color of each note 
+// OR : Provide the option to changeNoteBgColor() of each note
+
+// const colors = ["green", "blue", "red", "yellow", "orange", "pink", "purple"];
 
 export default {
   setup() {
